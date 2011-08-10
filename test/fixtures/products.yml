@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nampeproduct: MyString
+  category_id: 1
+  ingredients: MyText
+  expiration: MyText
+  conservation: MyText
+  preparation: MyText
+  mreinfo: MyText
+
+two:
+  nampeproduct: MyString
+  category_id: 1
+  ingredients: MyText
+  expiration: MyText
+  conservation: MyText
+  preparation: MyText
+  mreinfo: MyText

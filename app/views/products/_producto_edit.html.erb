@@ -1,0 +1,72 @@
+<!-- menu izquierda -->
+  <div class="colleft2">
+    <%  #render :partial => 'categories/categories', :controller => @categoriesr %>
+    <% #render :partial => 'categories/categories', :locals => {:category => @categories} %>
+    <% #render :partial=>'categories/categories', :collection => @categories %> 
+ 	<%= render :partial=>'categories/listado_edit', :controller => @categories %> 
+  </div>
+  <!-- fin menu izquierda -->
+
+
+<!-- contenido --> 
+  <div class="colright2">
+      
+	 <!-- titular -->
+ 	  <div class="titinterior2">
+        <h1><%=  @product.category.name%></h1>
+      </div>
+	 <!-- fin titular -->
+
+     
+
+
+	
+	
+	
+  </div>
+  <!-- fin contenido -->
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nampeproduct:</b>
+  <%= @product.nampeproduct %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @product.category_id %>
+
+</p>
+
+<p>
+  <b>Ingredients:</b>
+  <%= @product.ingredients %>
+</p>
+
+<p>
+  <b>Expiration:</b>
+  <%= @product.expiration %>
+</p>
+
+<p>
+  <b>Conservation:</b>
+  <%= @product.conservation %>
+</p>
+
+<p>
+  <b>Preparation:</b>
+  <%= @product.preparation %>
+</p>
+
+<p>
+  <b>Mreinfo:</b>
+  <%= @product.mreinfo %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

@@ -1,0 +1,428 @@
+/* RESET ---------------------------------------------------------------------------------------------------------------------*/
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, th {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+/* table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} */
+/* FIN DEL RESET ---------------------------------------------------------------------------------------------------------------------*/
+/* CLEARFIX ---------------------------------------------------------------------------------------------------------------------*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+/* End hide from IE-mac */
+
+/* FIN DEL CLEARFIX ---------------------------------------------------------------------------------------------------------------------*/
+/*
+/* CARGA DE FUENTES ---------------------------------------------------------------------------------------------------------------------*/
+@font-face {
+ font-family: 'BebasNeueRegular';
+ src: url('BebasNeue-webfont.eot');
+ src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),  url('BebasNeue-webfont.woff') format('woff'),  url('BebasNeue-webfont.ttf') format('truetype'),  url('BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+.texto {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:14px;
+	color:#E0CFAC;
+	line-height:18px;
+}
+.textomini{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:12px;
+	color:#E0CFAC;
+	line-height:16px;
+}
+
+.textportada {
+	width:540px;
+	padding:10px 10px 30px 40px;
+	float:left;
+}
+h1 {
+	font-family: BebasNeueRegular, Georgia, serif;
+	font-size:27px;
+	color:#E0CFAC;
+	font-weight:normal
+}
+h2 {
+	font-family: BebasNeueRegular, Georgia, serif;
+	font-size:22px;
+	color:#E0CFAC;
+	font-weight:normal
+}
+h3 {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	font-size:20px;
+	color:#E0CFAC;
+	font-weight:normal;
+}
+h4, h4 a:link, h4 a:visited{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	font-size:18px;
+	color:#E0CFAC;
+	font-weight:normal;
+	text-decoration:none;
+}
+h4 a:hover, h4 a:active {
+color:#FFF;
+text-decoration:none;
+}
+
+.txtcreditos, .txtcreditos a:link,.txtcreditos a:visited{
+font-family: BebasNeueRegular, Georgia, serif;
+	font-size:14px;
+	color:#E0CFAC;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.txtcreditos a:hover, .txtcreditos a:active {
+color:#FFF;
+text-decoration:none;
+}
+
+.txtmenu, .txtmenu a:link,.txtmenu a:visited{
+font-family: BebasNeueRegular, Georgia, serif;
+	font-size:20px;
+	color:#E0CFAC;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.txtmenu a:hover, .txtmenu a:active {
+color:#FFF;
+text-decoration:none;
+}
+
+.txtmenu2, .txtmenu2 a:link,.txtmenu2 a:visited{
+font-family: BebasNeueRegular, Georgia, serif;
+	font-size:20px;
+	color:#4A3721;
+	font-weight:normal;
+	text-decoration:none;
+	line-height:20px;
+}
+
+.txtmenu2 a:hover, .txtmenu2 a:active {
+color:#745634;
+text-decoration:none;
+}
+
+.txtmenu3{
+font-family: BebasNeueRegular, Georgia, serif;
+	font-size:20px;
+	color:#9B8964;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.vermas {
+font-family: BebasNeueRegular, Georgia, serif;
+font-size: 14px;
+color: #4A3721;
+background-color:#9B8964;
+padding: 2px;
+float:right;
+-moz-border-radius: 4px; 
+-webkit-border-radius: 4px; 
+}
+A.vermas:hover {background-color:#E0CFAC; text-decoration:none;}
+A.vermas:link{text-decoration:none;}
+A.vermas:visited{text-decoration:none;}
+
+
+
+/*MAQUETACION----------------------------------------------------*/
+
+body {
+	background-image:url(images/fondo.jpg);
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.contenedor {
+	margin:0 auto;
+	width:980px;
+	overflow:hidden;
+	background-image:url(images/fondo_int.jpg);
+	background-position:top;
+	background-repeat:repeat-y;
+	border-bottom: #5E4d39 3px solid;
+}
+.contenedor2 {
+	margin:0 auto;
+	width:980px;
+	overflow:hidden;
+	background-image:url(images/fondo_int2.jpg);
+	background-position:top;
+	background-repeat:repeat-y;
+	border-bottom: #5E4d39 3px solid;
+}
+.cabecera {
+	background-image:url(images/cabecera.png);
+	background-position:top;
+	background-repeat:no-repeat;
+	width:978px;
+	height:220px;
+	overflow:hidden;
+}
+
+.cuerpo {
+	width:978px;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+.colleft {
+	float:left;
+	width:590px;
+	margin-left:10px;
+}
+.colleft2 {
+	float:left;
+	width:218px;
+	margin-left:10px;
+}
+.colright {
+	float:right;
+	width:355px;
+	margin:0px 10px 0px 10px;
+}
+.colright2 {
+	float:right;
+	width:730px;
+	margin:0px 10px 0px 10px;
+}
+.blog{
+width:304px;
+padding:25px;
+background:url(images/fondoblog.gif);
+border-right:#000 1px solid;
+}
+.titportada {
+	width:570px;
+	background-image:url(images/tit_portada.png);
+	height:42px;
+	padding:10px;
+	float:left;
+	margin-bottom:5px;
+	
+}
+.titinterior{
+	width:190px;
+	background-image:url(images/tit_portada.png);
+	height:42px;
+	padding:10px;
+	float:left;
+	margin-bottom:5px;
+	
+}
+.titinterior2{
+	width:710px;
+	background-image:url(images/tit_interior.png);
+	height:42px;
+	padding:10px;
+	float:left;
+	margin-bottom:5px;
+	
+}
+.spacer{
+	width:590px;
+	background-image:url(images/spacer.png);
+	background-repeat:no-repeat;
+	height:9px;
+	float:left;
+	display:block;
+	overflow:hidden;
+	margin-bottom:5px;
+}
+
+.spacer2{
+	width:354px;
+	background-image:url(images/spacer2.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	height:9px;
+	float:right;
+	display:block;
+	overflow:hidden;
+	margin-bottom:5px;
+}
+
+.imagebig{
+width:584px;
+border:#8D693F 3px solid;
+overflow:hidden;
+float:left;
+}
+
+.iconos{
+width:200px;
+margin:149px 5px 0px 0px;
+float:right;
+}
+
+.galeria{
+width:590px;
+overflow:hidden;
+float:left;
+}
+
+.img_galeria{
+width:184px;
+border:#8D693F 3px solid;
+float:left;
+margin-right:10px;
+}
+
+.img_galeria2{
+width:184px;
+border:#8D693F 3px solid;
+float:left;
+}
+
+.img_listado{
+width:167px;
+border:#9B8964 3px solid;
+float:left;
+margin:0px 5px 5px 0px;
+background-color:#9B8964;
+}
+
+.img_listado img{
+float:left;
+}
+
+.txt_listado{
+float:left;
+padding:5px;
+width:157px;
+height:45px;
+margin-top:5px;
+background-image:url(images/fondo_listado.gif);
+}
+
+.pie{
+	width:940px;
+	height:100px;
+	background-image:url(images/pie.png);
+	background-repeat:no-repeat;
+	margin:10px;
+	padding:10px;
+	float:left;
+}
+
+.pie img{
+float:left;
+}
+.creditos{
+text-align:right;
+margin:35px 20px 0px 0px;
+float:right;
+width:550px;
+}
+
+.btn_menu{
+width:198px;
+height:43px;
+background-image:url(images/btn_menu.png);
+background-repeat:no-repeat;
+margin-bottom:3px;
+padding:20px 0px 0px 20px;
+float:left;
+}
+
+.listado{
+width:730px;
+overflow:hidden;
+float:left;
+}
+
+.subtitulo{
+width:685px;
+height:25px;
+background-image:url(images/fondo_subt.jpg);
+float:left;
+overflow:hidden;
+padding:10px;
+}
+
+.subtitulo p{
+float:left;
+}
+
+/*MENU----------------------------------------------------*/
+
+.menu{
+width:690px;
+margin:160px 20px 10px 20px;
+float:left;
+}
+
+.menu ul {
+font-family: 'BebasNeueRegular', Georgia, serif;
+font-size:20px;
+color:#E0CFAC;
+}
+
+.menu ul li {
+display: inline;
+}
+
+.menu ul li a:link, .menu ul li a:visited {
+color: #E0CFAC;
+text-decoration: none;
+padding-right:10px;
+}
+
+.menu ul li a:hover, .menu ul li a:active{
+color: #FFF;
+}

@@ -1,0 +1,84 @@
+<!-- menu izquierda -->
+  <div class="colleft2">
+    <%  #render :partial => 'categories/categories', :controller => @categoriesr %>
+    <% #render :partial => 'categories/categories', :locals => {:category => @categories} %>
+    <% #render :partial=>'categories/categories', :collection => @categories %> 
+ 	<%= render :partial=>'categories/listado_edit', :controller => @categories %> 
+  </div>
+  <!-- fin menu izquierda -->
+
+
+<!-- contenido --> 
+  <div class="colright2">
+      
+	 <!-- titular -->
+ 	  <div class="titinterior2">
+        <h1> NOVEDADES</h1>
+      </div>
+	 <!-- fin titular -->
+
+     <!-- subtitulo --> 
+	 <div class="subtitulo"><p class="txtmenu3">EMBUTIDOS</p>
+      <a href="#" class="vermas">VER TODO</a></div>
+     <!-- fin subtitulo -->
+
+
+	  <% @products.each do |product| %>
+	  <!-- lista producto -->
+ 	  <div class="listado">
+
+ 		<!-- producto -->
+		<div class="img_listado">
+	      <img src="images/img_portada.jpg" width="167" height="180" />
+	      <div class="txt_listado">
+            <p class="txtmenu2"><a href="#"><%= product.nampeproduct %></a></p>
+          </div>
+        </div>
+        <!-- fin producto -->
+
+      </div>
+	  <!-- fin listado -->	
+	  <% end %>
+	
+	
+	
+  </div>
+  <!-- fin contenido -->
+
+
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Nampeproduct</th>
+    <th>Category</th>
+    <th>Ingredients</th>
+    <th>Expiration</th>
+    <th>Conservation</th>
+    <th>Preparation</th>
+    <th>Mreinfo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.nampeproduct %></td>
+    <td><%= product.category_id %></td>
+ <td><%= product.category %>  <% product.productsimages%></td>
+    <td><%= product.ingredients %></td>
+    <td><%= product.expiration %></td>
+    <td><%= product.conservation %></td>
+    <td><%= product.preparation %></td>
+    <td><%= product.mreinfo %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% # will_paginate @products %>
+<%= link_to 'New Product', new_product_path %>

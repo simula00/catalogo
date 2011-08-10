@@ -1,0 +1,49 @@
+<!-- menu izquierda -->
+  <div class="colleft2">
+    <%  #render :partial => 'categories/categories', :controller => @categoriesr %>
+    <% #render :partial => 'categories/categories', :locals => {:category => @categories} %>
+    <% #render :partial=>'categories/categories', :collection => @categories %> 
+ 	<%= render :partial=>'categories/listado_edit', :controller => @categories %> 
+  </div>
+  <!-- fin menu izquierda -->
+
+
+<!-- contenido --> 
+  <div class="colright2">
+      
+	 <!-- titular -->
+ 	  <div class="titinterior2">
+        <h1> <%
+if (@category!=nil)%>
+<%= @category.name%>
+<%end
+ %></h1>
+      </div>
+	 <!-- fin titular -->
+
+     
+
+
+	  <% @products.each do |product| %>
+	  <!-- lista producto -->
+ 	  <div class="listado">
+
+ 		<!-- producto -->
+		<div class="img_listado">
+			<%= link_to image_tag("images/img_portada.jpg"), product %>
+			<%= link_to 'Show', product %>
+			 
+	      <div class="txt_listado">
+            <p class="txtmenu2"><a href="#"><%= product.nampeproduct %></a></p>
+          </div>
+        </div>
+        <!-- fin producto -->
+
+      </div>
+	  <!-- fin listado -->	
+	  <% end %>
+	<%= link_to 'New Product', new_product_path %>
+	
+	
+  </div>
+  <!-- fin contenido -->

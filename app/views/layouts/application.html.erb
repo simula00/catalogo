@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Laket Artesanos</title>
+<%= stylesheet_link_tag :all %>
+<%= javascript_include_tag :defaults %>
+<%= csrf_meta_tag %>
+</head>
+
+<body>
+<div class="contenedor2">
+  
+
+<!-- cabecera -->
+<div class="cabecera">
+    <div class="menu">
+    <ul>
+    <li><a href="index.html">LAKET</a></li>
+	 <li><a href="pnpspace.html">PRODUCTOS</a></li>
+	 <li><a href="miembros.html">CANALES DE DISTRIBUCIÓN</a></li>
+	 <li><a href="pnpschool.html">BLOG</a></li>
+     <li><a href="pnpschool.html">CONTACTO</a></li>
+    </ul>
+    </div>
+    <div class="iconos"><a href="https://www.facebook.com/profile.php?id=100002223007512" target="_blank"><img src="images/ico_facebook.png" width="63" height="64" /></a><img src="images/ico_twitter.png" width="63" height="64" /><img src="images/ico_rss.png" width="63" height="64" /></div>
+</div>
+<!-- fin cabecera -->
+ 
+
+<div class="cuerpo">
+ 	
+  <%= yield %>
+
+
+</div>
+
+
+<!--pie -->
+<div class="pie">
+  <a href="http://www.alimentosartesanos.com" target="_blank"><img src="images/logo_reyno.png" width="103" height="91" /><img src="images/logo_artesanos.png" width="92" height="94" /></a>
+  
+  <div class="creditos">
+    <p class="txtcreditos">©2011 laket artesanos | Pol.Utzubar Calle E P-10 31839 Arbizu (Navarra)  | <a href="legoland">nota legal</a></p>
+  </div> 
+</div>
+<!-- fin pie -->
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+<%= form_for(@product, :html => { :multipart => true }) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nampeproduct %><br />
+    <%= f.text_field :nampeproduct %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </div>
+
+
+
+
+
+  <div class="field">
+    <%= f.label :ingredients %><br />
+    <%= f.text_area :ingredients %>
+  </div>
+  <div class="field">
+    <%= f.label :expiration %><br />
+    <%= f.text_area :expiration %>
+  </div>
+  <div class="field">
+    <%= f.label :conservation %><br />
+    <%= f.text_area :conservation %>
+  </div>
+  <div class="field">
+    <%= f.label :preparation %><br />
+    <%= f.text_area :preparation %>
+  </div>
+  <div class="field">
+    <%= f.label :mreinfo %><br />
+    <%= f.text_area :mreinfo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

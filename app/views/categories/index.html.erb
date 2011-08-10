@@ -1,0 +1,34 @@
+<DIV style="padding-left:200px; padding-top:10px;">
+<h1>LISTADO DE CATEGORÍAS </h1>
+
+
+<table>
+<tr>
+	<td ><%= link_to 'Añadir categoría', new_category_path, :class => 'vermas'   %><</td>
+</tr>
+<tr>
+	<td>
+<table>
+  <tr>
+    <th>&nbsp;</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td class="texto" width="650px"><%= category.name %></td>
+    <td></td>
+    <td><%= link_to 'editar', edit_category_path(category), :class => 'vermas'  %></td>
+    <td><%= link_to 'eliminar', category, :confirm => 'Estás seguro?', :method => :delete, :class => 'vermas'  %></td>
+  </tr>
+<% end %>
+</table>
+</td>
+</tr>
+</table>
+
+
+
+<DIV>

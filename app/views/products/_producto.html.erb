@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nampeproduct:</b>
+  <%= @product.nampeproduct %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @product.category_id %>
+</p>
+
+<p>
+  <b>Ingredients:</b>
+  <%= @product.ingredients %>
+</p>
+
+<p>
+  <b>Expiration:</b>
+  <%= @product.expiration %>
+</p>
+
+<p>
+  <b>Conservation:</b>
+  <%= @product.conservation %>
+</p>
+
+<p>
+  <b>Preparation:</b>
+  <%= @product.preparation %>
+</p>
+
+<p>
+  <b>Mreinfo:</b>
+  <%= @product.mreinfo %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

@@ -1,0 +1,17 @@
+<div class="titinterior">
+       <h1> PRODUCTOS</h1>
+     </div>
+
+ <% @categories.each do |category| %>  
+
+   <div class="btn_menu"><p class="txtmenu"><%= link_to category.name, :action => 'index', :cat => category.id %></p>
+
+	</div>
+ <% end %>
+
+
+
+
+
+
+
